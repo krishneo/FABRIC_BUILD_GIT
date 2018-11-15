@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LUDebugMain" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.k2view.cdbms.shared.studioDebug.LUDebugMain" />
+    <module name="PATIENT" />
+    <option name="PROGRAM_PARAMETERS" value="instanceID" />
+    <option name="VM_PARAMETERS" value="-DSTUDIO_DEBUG=true -DuserLogFolder=&quot;${LOCALAPPDATA}\K2View\K2View Fabric Studio\Logs&quot;" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

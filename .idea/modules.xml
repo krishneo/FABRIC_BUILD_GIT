@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <!-- Next line to be used in project with one module containing all LUs: -->
+      <!-- <module fileurl="file://$PROJECT_DIR$/.idea/FABRIC_BUILD.iml" filepath="$PROJECT_DIR$/.idea/FABRIC_BUILD.iml" /> -->
+      <!-- Create module for each LU and Shared: -->
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SharedObjects.iml" filepath="$PROJECT_DIR$/.idea/modules/SharedObjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/k2_ref.iml" filepath="$PROJECT_DIR$/.idea/modules/k2_ref.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/k2_ws.iml" filepath="$PROJECT_DIR$/.idea/modules/k2_ws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PATIENT.iml" filepath="$PROJECT_DIR$/.idea/modules/PATIENT.iml" />
+    </modules>
+  </component>
+</project>

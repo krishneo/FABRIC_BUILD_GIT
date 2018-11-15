@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_public_prescribed_medication</ID>
+  <PopulationObjectName>query_public_prescribed_medication</PopulationObjectName>
+  <TableName>prescribed_medication</TableName>
+  <RootItemID>query_query_public_prescribed_medication</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="prescription_id" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="ssn" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="prescribed_medication" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="from_date" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="to_date" id="queryCol_4" dataType="Text" index="4" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_prescribed_medication" name="query_public_prescribed_medication" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="PIS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="prescription_id" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="ssn" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="prescribed_medication" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="from_date" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="to_date" dataType="Text" index="4" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.prescribed_medication]]></SQL>
+    </Item>
+    <Item xsi:type="LookupDataSave" id="tblLookup.32" name="medication_reference" nodeOrder="1" module="Lookup" mapObjectModule="Lookup" alias="" itemType="Table" lookupNotFound="Reject_Record" isReference="true" cacheLookupValues="false">
+      <InputsList>
+        <Input xsi:type="LookupDataSaveColumnInput" id="tblLookup.32.in.medication_id" name="medication_id" columnID="tblCol_424eafecb58d4da7abd90140b1968c16" />
+      </InputsList>
+      <OutputsList>
+        <Output xsi:type="LookupDataSaveColumn" id="tblLookup.32.out.medication_name" name="medication_name" columnID="tblCol_4da208db049c4c8b9ee70e1c169b8769" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="14" fromNodeOrder="0" fromItemID="query_query_public_prescribed_medication" fromColID="queryCol_0" toItemID="tbl_prescribed_medication" toColID="tblCol_778998c0db4a4462af53cac6faa42cc5" />
+    <Link partId="15" fromNodeOrder="0" fromItemID="query_query_public_prescribed_medication" fromColID="queryCol_1" toItemID="tbl_prescribed_medication" toColID="tblCol_1b58179175204e0c906ed9fe0d56cb57" />
+    <Link partId="16" fromNodeOrder="0" fromItemID="query_query_public_prescribed_medication" fromColID="queryCol_2" toItemID="tbl_prescribed_medication" toColID="tblCol_e20617fc009c40ed920586de3c642b93" />
+    <Link partId="17" fromNodeOrder="0" fromItemID="query_query_public_prescribed_medication" fromColID="queryCol_3" toItemID="tbl_prescribed_medication" toColID="tblCol_3af6781a419c4d1b828d2e74f48ebe45" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_public_prescribed_medication" fromColID="queryCol_4" toItemID="tbl_prescribed_medication" toColID="tblCol_0381c81342dd4c68805d14b364680927" />
+    <Link partId="38" fromNodeOrder="1" fromItemID="tblLookup.32" fromColID="tblLookup.32.out.medication_name" toItemID="tbl_prescribed_medication" toColID="tblCol_d1f1a530cc504ea6a8ec36f8542535f7" />
+    <Link partId="37" fromNodeOrder="0" fromItemID="query_query_public_prescribed_medication" fromColID="queryCol_2" toItemID="tblLookup.32" toColID="tblLookup.32.in.medication_id" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="prescribed_medication.query_public_prescribed_medication.k2tablePop.xml" lastPartID="56">
+      <TableNode partID="0" name="prescribed_medication" pos="435.072144 5.781254" width="310.7069" />
+      <DBQueryNode partID="8" name="PIS_DB" pos="10 0.8177109" size="306.454834 120.364578" isRoot="true">
+        <DBQuery>{"Name":"query_public_prescribed_medication","ID":"query_query_public_prescribed_medication","ConnName":"PIS_DB","SQL":"SELECT * FROM public.prescribed_medication","ColumnsList":[{"ID":"queryCol_0","Name":"prescription_id","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"ssn","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"prescribed_medication","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"from_date","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"to_date","DataType":"Text","Index":4,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <LUDBLookupMapNode id="0" L0="1" L1="2" R0="3" R1="4" partID="32" topLabel="medication_reference (32)" pos="231 274.690125" size="250 84.14583" isMinimized="false" itemType="Table">
+        <LUDBLookupItem>{"ID":"tblLookup.32","Name":"medication_reference","Alias":"","ItemType":3,"IsReference":true,"LookupNotFound":0,"CacheLookupValues":false,"InputColumnsMapList":[{"ID":"tblLookup.32.in.medication_id","Name":"medication_id","ColumnID":"tblCol_424eafecb58d4da7abd90140b1968c16","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":0},{"ID":"tblLookup.32.in.medication_name","Name":"medication_name","ColumnID":"tblCol_4da208db049c4c8b9ee70e1c169b8769","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1}],"OutputColumnsMapList":[{"ID":"tblLookup.32.out.medication_id","Name":"medication_id","ColumnID":"tblCol_424eafecb58d4da7abd90140b1968c16","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":0},{"ID":"tblLookup.32.out.medication_name","Name":"medication_name","ColumnID":"tblCol_4da208db049c4c8b9ee70e1c169b8769","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1}]}</LUDBLookupItem>
+      </LUDBLookupMapNode>
+      <Link partID="14" from="5" to="6" pointsArr="316.454834 36.85417 326.454834 36.85417 425.072144 36.81771 435.072144 36.81771" fromNodePartID="8" fromNodeColumnName="prescription_id" toNodePartID="0" toNodeColumnName="prescription_id" />
+      <Link partID="37" from="7" to="1" pointsArr="316.454834 61 326.454834 61 218 310.7266 228 310.7266" fromNodePartID="8" fromNodeColumnName="prescribed_medication" toNodePartID="32" toNodeColumnName="medication_id" />
+      <Link partID="15" from="8" to="9" pointsArr="316.454834 48.9270859 326.454834 48.9270859 425.072144 48.890625 435.072144 48.890625" fromNodePartID="8" fromNodeColumnName="ssn" toNodePartID="0" toNodeColumnName="ssn" />
+      <Link partID="16" from="7" to="10" pointsArr="316.454834 61 326.454834 61 425.072144 60.96354 435.072144 60.96354" fromNodePartID="8" fromNodeColumnName="prescribed_medication" toNodePartID="0" toNodeColumnName="prescribed_medication" />
+      <Link partID="17" from="11" to="12" pointsArr="316.454834 73.0729141 326.454834 73.0729141 425.072144 73.03645 435.072144 73.03645" fromNodePartID="8" fromNodeColumnName="from_date" toNodePartID="0" toNodeColumnName="from_date" />
+      <Link partID="18" from="13" to="14" pointsArr="316.454834 85.14583 326.454834 85.14583 425.072144 85.109375 435.072144 85.109375" fromNodePartID="8" fromNodeColumnName="to_date" toNodePartID="0" toNodeColumnName="to_date" />
+      <Link partID="38" from="4" to="15" pointsArr="484 322.7995 494 322.7995 425.072144 97.18228 435.072144 97.18228" fromNodePartID="32" fromNodeColumnName="medication_name" toNodePartID="0" toNodeColumnName="new_value" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

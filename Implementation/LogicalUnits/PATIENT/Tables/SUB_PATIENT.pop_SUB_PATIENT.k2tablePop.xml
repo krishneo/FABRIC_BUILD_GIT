@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>pop_SUB_PATIENT</ID>
+  <PopulationObjectName>pop_SUB_PATIENT</PopulationObjectName>
+  <TableName>SUB_PATIENT</TableName>
+  <RootItemID>f_6</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="SSN" id="fi_6.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item id="f_6" name="fnPop_SUB_PATIENT" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnPop_SUB_PATIENT.k2function.xml">
+      <InputsList>
+        <Input id="fi_6.0" name="SSN" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_6.0" name="SSN" />
+        <Output id="fo_6.1" name="FIRST_NAME" />
+        <Output id="fo_6.2" name="LAST_NAME" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="11" fromNodeOrder="0" fromItemID="f_6" fromColID="fo_6.0" toItemID="SUB_PATIENT" toColID="tblCol_2e7ec9dd04e84853a0507721a6f9eb31" />
+    <Link partId="12" fromNodeOrder="0" fromItemID="f_6" fromColID="fo_6.1" toItemID="SUB_PATIENT" toColID="tblCol_9bb2ba6a274e428e99d64b3d857293c4" />
+    <Link partId="13" fromNodeOrder="0" fromItemID="f_6" fromColID="fo_6.2" toItemID="SUB_PATIENT" toColID="tblCol_926bce39c11047a386dea0ccede8ef2c" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="SUB_PATIENT.pop_SUB_PATIENT.k2tablePop.xml" lastPartID="23">
+      <TableNode partID="0" name="SUB_PATIENT" pos="288.4505 0.854167938" width="309.324158" />
+      <FunctionMapNode id="0" R0="1" R1="2" R2="3" L0="4" partID="6" topLabel="fnPop_SUB_PATIENT (6)" pos="9.99996948 10.3450546" size="158.4505 61.30989" isRoot="true">
+        <KFunction>{"Name":"fnPop_SUB_PATIENT","ID":"f_6","Category":"Root","Version":"4.1.0.13","FunctionLevel":0,"FunctionType":0,"FunctionType2":1,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"IsRootFunction":true,"inputParams":[{"Name":"SSN","ID":"fi_6.0","Index":0,"DataType":"String"}],"outputParams":[{"Name":"SSN","ID":"fo_6.0","Index":0,"DataType":"String","Comment":""},{"Name":"FIRST_NAME","ID":"fo_6.1","Index":1,"DataType":"String","Comment":""},{"Name":"LAST_NAME","ID":"fo_6.2","Index":2,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="11" from="1" to="5" pointsArr="161.158569 31.4726543 171.158569 31.4726543 218.4505 31 238.4505 31 278.4505 31.8906269 288.4505 31.8906269" fromNodePartID="6" fromNodeColumnName="SSN" toNodePartID="0" toNodeColumnName="SSN" />
+      <Link partID="12" from="2" to="6" pointsArr="161.158569 43.54557 171.158569 43.54557 218.4505 44 238.4505 44 278.4505 43.9635429 288.4505 43.9635429" fromNodePartID="6" fromNodeColumnName="FIRST_NAME" toNodePartID="0" toNodeColumnName="FIRST_NAME" />
+      <Link partID="13" from="3" to="7" pointsArr="161.158569 55.6184845 171.158569 55.6184845 218.4505 56 238.4505 56 278.4505 56.0364571 288.4505 56.0364571" fromNodePartID="6" fromNodeColumnName="LAST_NAME" toNodePartID="0" toNodeColumnName="LAST_NAME" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

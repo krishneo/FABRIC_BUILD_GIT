@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DbQueryItemOfDataTable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>IG_10_SSN</Name>
+  <DbConn>HIS_DB</DbConn>
+  <Sql>select SSN from PATIENT where rownum &lt; 10 </Sql>
+  <IsSqlValid>true</IsSqlValid>
+</DbQueryItemOfDataTable>

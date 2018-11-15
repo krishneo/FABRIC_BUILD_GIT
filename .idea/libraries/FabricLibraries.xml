@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="FabricLibraries">
+    <CLASSES>
+      <root url="file://C:/k2view/K2Installation/Fabric/FabricStudio4.1.0/Fabric Studio 4.1.0.13 - fabric_4.1.0_11/classpath" />
+      <root url="file://C:/k2view/K2Installation/Fabric/FabricStudio4.1.0/Fabric Studio 4.1.0.13 - fabric_4.1.0_11/classpathConf" />
+	  <root url="file://$PROJECT_DIR$/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/k2view/K2Installation/Fabric/FabricStudio4.1.0/Fabric Studio 4.1.0.13 - fabric_4.1.0_11/classpath" recursive="false" />
+	<jarDirectory url="file://C:/k2view/K2Installation/Fabric/FabricStudio4.1.0/Fabric Studio 4.1.0.13 - fabric_4.1.0_11/classpathConf" recursive="false" />
+	<jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
+  </library>
+</component>

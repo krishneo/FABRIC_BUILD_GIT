@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>lab_results</Name>
+  <ID>tbl_lab_results</ID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <Columns>
+    <Column name="visit_id" id="tblCol_8813cf598d664764894250e018f37789" index="0" datatype="Text" />
+    <Column name="lab_id" id="tblCol_e054b309fdc64ae6a3724e4f1b7c0e7a" index="1" datatype="Text" mandatory="true" />
+    <Column name="lab_date" id="tblCol_35348a859b374d549f4bd1471ae85f2e" index="2" datatype="Text" />
+    <Column name="lab_type" id="tblCol_ac3b76838300438682ca4d7594b0adec" index="3" datatype="Text" />
+    <Column name="results" id="tblCol_87fa71c07b144fae9cd916da7b9d88e9" index="4" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_e054b309fdc64ae6a3724e4f1b7c0e7a" />
+  </IndexesList>
+  <EnrichmentList />
+</TableObject>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>SUB_PATIENT</Name>
+  <ID>SUB_PATIENT</ID>
+  <Version>4.1.0.13</Version>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SerializationName />
+  <Columns>
+    <Column name="SSN" id="tblCol_2e7ec9dd04e84853a0507721a6f9eb31" index="0" datatype="Text" serializationName="SSN" />
+    <Column name="FIRST_NAME" id="tblCol_9bb2ba6a274e428e99d64b3d857293c4" index="1" datatype="Text" serializationName="FIRST_NAME" />
+    <Column name="LAST_NAME" id="tblCol_926bce39c11047a386dea0ccede8ef2c" index="2" datatype="Text" serializationName="LAST_NAME" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+</TableObject>

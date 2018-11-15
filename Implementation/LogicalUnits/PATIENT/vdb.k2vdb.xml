@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="4.1.0.13">
+  <Name>vdb</Name>
+  <RootView>PATIENT</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <Tables>
+    <Table>PATIENT</Table>
+    <Table>VISIT</Table>
+    <Table>INVOICE</Table>
+    <Table>PAYMENT</Table>
+    <Table>INSURANCE_INFORMATION</Table>
+    <Table>FAMILY_HISTORY</Table>
+    <Table>ALLERGIES</Table>
+    <Table>pharmacy_information</Table>
+    <Table>prescribed_medication</Table>
+    <Table>radiology_results</Table>
+    <Table>lab_results</Table>
+    <Table>SUB_PATIENT</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="PATIENT">
+      <Populations>
+        <Population id="query_PATIENT" name="query_PATIENT" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="VISIT">
+      <Populations>
+        <Population id="query_VISIT" name="query_VISIT" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="INVOICE">
+      <Populations>
+        <Population id="query_INVOICE" name="query_INVOICE" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="PAYMENT">
+      <Populations>
+        <Population id="query_PAYMENT" name="query_PAYMENT" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="INSURANCE_INFORMATION">
+      <Populations>
+        <Population id="query_INSURANCE_INFORMATION" name="query_INSURANCE_INFORMATION" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="FAMILY_HISTORY">
+      <Populations>
+        <Population id="query_FAMILY_HISTORY" name="query_FAMILY_HISTORY" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="ALLERGIES">
+      <Populations>
+        <Population id="query_ALLERGIES" name="query_ALLERGIES" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="pharmacy_information">
+      <Populations>
+        <Population id="query_public_pharmacy_information" name="query_public_pharmacy_information" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="prescribed_medication">
+      <Populations>
+        <Population id="query_public_prescribed_medication" name="query_public_prescribed_medication" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="radiology_results">
+      <Populations>
+        <Population id="query_public_radiology_results" name="query_public_radiology_results" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="lab_results">
+      <Populations>
+        <Population id="query_public_lab_results" name="query_public_lab_results" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="SUB_PATIENT">
+      <Populations>
+        <Population id="pop_SUB_PATIENT" name="pop_SUB_PATIENT" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList>
+    <Item order="1" active="true" name="PATIENT" columnName="PATIENT_Enrich_Object" type="Table" />
+    <Item order="2" active="true" name="prescribed_medication" columnName="PRESCRIBED_MEDICATION_EO" type="Table" />
+    <Item order="3" active="true" name="INVOICE" columnName="krish_invoices_eo" type="Table" />
+  </EnrichmentsOrderList>
+  <ReferencesList>
+    <Item active="true" name="medication_reference" />
+  </ReferencesList>
+  <Relations />
+  <DatabaseRelations>
+    <Relation id="121">
+      <From tableType="TableObject" table="PATIENT" column="PATIENT_ID" columnId="tblCol_504cac91baea4895a8aeabd3411131f7" />
+      <To tableType="TableObject" table="VISIT" populationObjectName="query_VISIT" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="122">
+      <From tableType="TableObject" table="PATIENT" column="PATIENT_ID" columnId="tblCol_504cac91baea4895a8aeabd3411131f7" />
+      <To tableType="TableObject" table="INVOICE" populationObjectName="query_INVOICE" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="123">
+      <From tableType="TableObject" table="PATIENT" column="PATIENT_ID" columnId="tblCol_504cac91baea4895a8aeabd3411131f7" />
+      <To tableType="TableObject" table="INSURANCE_INFORMATION" populationObjectName="query_INSURANCE_INFORMATION" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="124">
+      <From tableType="TableObject" table="PATIENT" column="PATIENT_ID" columnId="tblCol_504cac91baea4895a8aeabd3411131f7" />
+      <To tableType="TableObject" table="FAMILY_HISTORY" populationObjectName="query_FAMILY_HISTORY" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="125">
+      <From tableType="TableObject" table="PATIENT" column="PATIENT_ID" columnId="tblCol_504cac91baea4895a8aeabd3411131f7" />
+      <To tableType="TableObject" table="ALLERGIES" populationObjectName="query_ALLERGIES" column="PATIENT_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="126">
+      <From tableType="TableObject" table="INVOICE" column="INVOICE_ID" columnId="tblCol_2f67908021834b9a95ef43a20c10b7e2" />
+      <To tableType="TableObject" table="PAYMENT" populationObjectName="query_PAYMENT" column="INVOICE_ID" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="577">
+      <From tableType="TableObject" table="PATIENT" column="SSN" columnId="tblCol_e935f441ee614b6f9762432a27e2b083" />
+      <To tableType="TableObject" table="pharmacy_information" populationObjectName="query_public_pharmacy_information" column="ssn" columnId="queryCol_1" />
+    </Relation>
+    <Relation id="578">
+      <From tableType="TableObject" table="PATIENT" column="SSN" columnId="tblCol_e935f441ee614b6f9762432a27e2b083" />
+      <To tableType="TableObject" table="prescribed_medication" populationObjectName="query_public_prescribed_medication" column="ssn" columnId="queryCol_1" />
+    </Relation>
+    <Relation id="608">
+      <From tableType="TableObject" table="VISIT" column="VISIT_ID" columnId="tblCol_575e23ddcacf458aa4f4d466f9951570" />
+      <To tableType="TableObject" table="lab_results" populationObjectName="query_public_lab_results" column="visit_id" columnId="queryCol_0" />
+    </Relation>
+    <Relation id="922">
+      <From tableType="TableObject" table="PATIENT" column="SSN" columnId="tblCol_e935f441ee614b6f9762432a27e2b083" />
+      <To tableType="TableObject" table="SUB_PATIENT" populationObjectName="pop_SUB_PATIENT" column="SSN" columnId="fi_6.0" />
+    </Relation>
+    <Relation id="1295">
+      <From tableType="TableObject" table="VISIT" column="PREFIXED_VISIT_ID" columnId="tblCol_2be1ba16d19d4c9899752ff67d7fd812" />
+      <To tableType="TableObject" table="radiology_results" populationObjectName="query_public_radiology_results" column="visit_id" columnId="queryCol_0" />
+    </Relation>
+  </DatabaseRelations>
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="4.1.0.13" name="vdb.k2vdb.xml" lastPartID="1417">
+      <Node id="0" partID="0" name="PATIENT" isRootView="true" pos="11 864" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"PATIENT","TablePopulationPropertiesList":[{"ID":"query_PATIENT","Name":"query_PATIENT","Order":1,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="1" partID="21" name="VISIT" isRootView="false" pos="313 189" size="257 137.5469" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"VISIT","TablePopulationPropertiesList":[{"ID":"query_VISIT","Name":"query_VISIT","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="2" partID="36" name="INVOICE" isRootView="false" pos="313 414" size="257 137.546875" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"INVOICE","TablePopulationPropertiesList":[{"ID":"query_INVOICE","Name":"query_INVOICE","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="3" partID="51" name="PAYMENT" isRootView="false" pos="615 439" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"PAYMENT","TablePopulationPropertiesList":[{"ID":"query_PAYMENT","Name":"query_PAYMENT","Order":3,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="4" partID="64" name="INSURANCE_INFORMATION" isRootView="false" pos="313 614" size="257 137.546753" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"INSURANCE_INFORMATION","TablePopulationPropertiesList":[{"ID":"query_INSURANCE_INFORMATION","Name":"query_INSURANCE_INFORMATION","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="5" partID="81" name="FAMILY_HISTORY" isRootView="false" pos="313 814" size="257 137.546753" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"FAMILY_HISTORY","TablePopulationPropertiesList":[{"ID":"query_FAMILY_HISTORY","Name":"query_FAMILY_HISTORY","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="6" partID="110" name="ALLERGIES" isRootView="false" pos="313 1014" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"ALLERGIES","TablePopulationPropertiesList":[{"ID":"query_ALLERGIES","Name":"query_ALLERGIES","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="7" partID="489" name="pharmacy_information" isRootView="false" pos="313 1214" size="257 137.547119" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"pharmacy_information","TablePopulationPropertiesList":[{"ID":"query_public_pharmacy_information","Name":"query_public_pharmacy_information","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="8" partID="512" name="prescribed_medication" isRootView="false" pos="313 1414" size="257 137.547119" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"prescribed_medication","TablePopulationPropertiesList":[{"ID":"query_public_prescribed_medication","Name":"query_public_prescribed_medication","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="9" partID="579" name="radiology_results" isRootView="false" pos="615 14" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"radiology_results","TablePopulationPropertiesList":[{"ID":"query_public_radiology_results","Name":"query_public_radiology_results","Order":3,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="10" partID="595" name="lab_results" isRootView="false" pos="615 214" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"lab_results","TablePopulationPropertiesList":[{"ID":"query_public_lab_results","Name":"query_public_lab_results","Order":3,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Node id="11" partID="903" name="SUB_PATIENT" isRootView="false" pos="313 1614" size="257 136" listGroupSize="250 100" viewType="Table">
+        <TableProperties>{"TableName":"SUB_PATIENT","TablePopulationPropertiesList":[{"ID":"pop_SUB_PATIENT","Name":"pop_SUB_PATIENT","Order":2,"Disabled":false,"IsEnrichment":false}]}</TableProperties>
+      </Node>
+      <Link from="12" to="13" partID="121" linkType="Database" pointsArr="268 902 278 902 303 227 313 227" fromNodePartID="0" fromNodeColumnName="PATIENT_ID" toNodePartID="21" toNodeColumnName="PATIENT_ID" toNodePopulationObjectName="query_VISIT" />
+      <Link from="12" to="14" partID="122" linkType="Database" pointsArr="268 902 278 902 303 452 313 452" fromNodePartID="0" fromNodeColumnName="PATIENT_ID" toNodePartID="36" toNodeColumnName="PATIENT_ID" toNodePopulationObjectName="query_INVOICE" />
+      <Link from="12" to="15" partID="123" linkType="Database" pointsArr="268 902 278 902 303 659.5456 313 659.5456" fromNodePartID="0" fromNodeColumnName="PATIENT_ID" toNodePartID="64" toNodeColumnName="PATIENT_ID" toNodePopulationObjectName="query_INSURANCE_INFORMATION" />
+      <Link from="12" to="16" partID="124" linkType="Database" pointsArr="268 902 278 902 303 859.5456 313 859.5456" fromNodePartID="0" fromNodeColumnName="PATIENT_ID" toNodePartID="81" toNodeColumnName="PATIENT_ID" toNodePopulationObjectName="query_FAMILY_HISTORY" />
+      <Link from="12" to="17" partID="125" linkType="Database" pointsArr="268 902 278 902 303 1059.54553 313 1059.54553" fromNodePartID="0" fromNodeColumnName="PATIENT_ID" toNodePartID="110" toNodeColumnName="PATIENT_ID" toNodePopulationObjectName="query_ALLERGIES" />
+      <Link from="18" to="19" partID="126" linkType="Database" pointsArr="570 459.545563 580 459.545563 605 484.545563 615 484.545563" fromNodePartID="36" fromNodeColumnName="INVOICE_ID" toNodePartID="51" toNodeColumnName="INVOICE_ID" toNodePopulationObjectName="query_PAYMENT" />
+      <Link from="20" to="21" partID="577" linkType="Database" pointsArr="268 902 278 902 303 1275.63672 313 1275.63672" fromNodePartID="0" fromNodeColumnName="SSN" toNodePartID="489" toNodeColumnName="ssn" toNodePopulationObjectName="query_public_pharmacy_information" />
+      <Link from="20" to="22" partID="578" linkType="Database" pointsArr="268 902 278 902 303 1475.63672 313 1475.63672" fromNodePartID="0" fromNodeColumnName="SSN" toNodePartID="512" toNodeColumnName="ssn" toNodePopulationObjectName="query_public_prescribed_medication" />
+      <Link from="23" to="24" partID="608" linkType="Database" pointsArr="570 227 580 227 605 259.5456 615 259.5456" fromNodePartID="21" fromNodeColumnName="VISIT_ID" toNodePartID="595" toNodeColumnName="visit_id" toNodePopulationObjectName="query_public_lab_results" />
+      <Link from="20" to="25" partID="922" linkType="Database" pointsArr="268 902 278 902 303 1659.54553 313 1659.54553" fromNodePartID="0" fromNodeColumnName="SSN" toNodePartID="903" toNodeColumnName="SSN" toNodePopulationObjectName="pop_SUB_PATIENT" />
+      <Link from="26" to="27" partID="1295" linkType="Database" pointsArr="570 234.545578 580 234.545578 605 59.54557 615 59.54557" fromNodePartID="21" fromNodeColumnName="PREFIXED_VISIT_ID" toNodePartID="579" toNodeColumnName="visit_id" toNodePopulationObjectName="query_public_radiology_results" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

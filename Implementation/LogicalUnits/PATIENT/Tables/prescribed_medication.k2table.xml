@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>prescribed_medication</Name>
+  <ID>tbl_prescribed_medication</ID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <Columns>
+    <Column name="prescription_id" id="tblCol_778998c0db4a4462af53cac6faa42cc5" index="0" datatype="Text" mandatory="true" />
+    <Column name="ssn" id="tblCol_1b58179175204e0c906ed9fe0d56cb57" index="1" datatype="Text" />
+    <Column name="prescribed_medication" id="tblCol_e20617fc009c40ed920586de3c642b93" index="2" datatype="Text" />
+    <Column name="from_date" id="tblCol_3af6781a419c4d1b828d2e74f48ebe45" index="3" datatype="Text" />
+    <Column name="to_date" id="tblCol_0381c81342dd4c68805d14b364680927" index="4" datatype="Text" />
+    <Column name="new_value" id="tblCol_d1f1a530cc504ea6a8ec36f8542535f7" index="5" datatype="text" />
+    <Column name="medication_value_by_eo" id="tblCol_ddab4144f1f34663ade975f5645aeaff" index="6" datatype="text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_778998c0db4a4462af53cac6faa42cc5" />
+  </IndexesList>
+  <EnrichmentList>
+    <Enrichment>
+      <Name>PRESCRIBED_MEDICATION_EO</Name>
+      <Type>Function</Type>
+      <TableName>prescribed_medication</TableName>
+    </Enrichment>
+  </EnrichmentList>
+</TableObject>

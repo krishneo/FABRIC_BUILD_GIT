@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_INVOICE</ID>
+  <PopulationObjectName>query_INVOICE</PopulationObjectName>
+  <TableName>INVOICE</TableName>
+  <RootItemID>query_query_INVOICE</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="PATIENT_ID" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="INVOICE_ID" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="ISSUED_DATE" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="DUE_DATE" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="STATUS" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="BALANCE" id="queryCol_5" dataType="Real" index="5" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_INVOICE" name="query_INVOICE" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="HIS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="PATIENT_ID" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="INVOICE_ID" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="ISSUED_DATE" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="DUE_DATE" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="STATUS" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="BALANCE" dataType="Real" index="5" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM INVOICE]]></SQL>
+    </Item>
+    <Item id="f_52" name="compute_balance" nodeOrder="1" module="Function" mapObjectModule="Function" fileName="compute_balance.k2function.xml">
+      <InputsList>
+        <Input id="fi_52.0" name="input_balance" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_52.0" name="real_balance" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="16" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_0" toItemID="tbl_INVOICE" toColID="tblCol_d9b86c4230db48aaba2ab102f35e45b6" />
+    <Link partId="17" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_1" toItemID="tbl_INVOICE" toColID="tblCol_2f67908021834b9a95ef43a20c10b7e2" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_2" toItemID="tbl_INVOICE" toColID="tblCol_d143ff3063f64de196934ed2c40b9ac8" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_3" toItemID="tbl_INVOICE" toColID="tblCol_75970c21168947f88c8f2b497d2d7210" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_4" toItemID="tbl_INVOICE" toColID="tblCol_faa3622c288b4110ac0b485899c4f9c7" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_5" toItemID="tbl_INVOICE" toColID="tblCol_98fe5e6c91964fa58c08d2977039dc63" />
+    <Link partId="56" fromNodeOrder="1" fromItemID="f_52" fromColID="fo_52.0" toItemID="tbl_INVOICE" toColID="tblCol_d7b8a9e0fdd24450ad47bf5cb6127045" />
+    <Link partId="55" fromNodeOrder="0" fromItemID="query_query_INVOICE" fromColID="queryCol_5" toItemID="f_52" toColID="fi_52.0" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="INVOICE.query_INVOICE.k2tablePop.xml" lastPartID="108">
+      <TableNode partID="0" name="INVOICE" pos="531.6421 6.708336" width="310.2362" />
+      <DBQueryNode partID="9" name="HIS_DB" pos="10 8.78125" size="253 132.4375" isRoot="true">
+        <DBQuery>{"Name":"query_INVOICE","ID":"query_query_INVOICE","ConnName":"HIS_DB","SQL":"SELECT * FROM INVOICE","ColumnsList":[{"ID":"queryCol_0","Name":"PATIENT_ID","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"INVOICE_ID","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"ISSUED_DATE","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"DUE_DATE","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"STATUS","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"BALANCE","DataType":"Real","Index":5,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <FunctionMapNode id="0" L0="1" R0="2" partID="52" topLabel="compute_balance (52)" pos="308.060516 152.454422" size="179.433014 45.091156" isRoot="false">
+        <KFunction>{"Name":"compute_balance","ID":"f_52","Category":"krish","Version":"4.1.0.13","FunctionLevel":0,"FunctionType":0,"FunctionType2":0,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"IsRootFunction":false,"inputParams":[{"Name":"input_balance","ID":"fi_52.0","Index":0,"DataType":"Integer"}],"outputParams":[{"Name":"real_balance","ID":"fo_52.0","Index":0,"DataType":"Double"}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="16" from="3" to="4" pointsArr="263 44.81771 273 44.81771 522.1045 37.74479 532.1045 37.74479" fromNodePartID="9" fromNodeColumnName="PATIENT_ID" toNodePartID="0" toNodeColumnName="PATIENT_ID" />
+      <Link partID="55" from="5" to="1" pointsArr="263 105.182281 273 105.182281 298.060516 177.545563 308.060516 177.545563" fromNodePartID="9" fromNodeColumnName="BALANCE" toNodePartID="52" toNodeColumnName="input_balance" />
+      <Link partID="17" from="6" to="7" pointsArr="263 56.890625 273 56.890625 522.1045 49.8177032 532.1045 49.8177032" fromNodePartID="9" fromNodeColumnName="INVOICE_ID" toNodePartID="0" toNodeColumnName="INVOICE_ID" />
+      <Link partID="18" from="8" to="9" pointsArr="263 68.96354 273 68.96354 522.1045 61.8906174 532.1045 61.8906174" fromNodePartID="9" fromNodeColumnName="ISSUED_DATE" toNodePartID="0" toNodeColumnName="ISSUED_DATE" />
+      <Link partID="19" from="10" to="11" pointsArr="263 81.03645 273 81.03645 522.1045 73.96353 532.1045 73.96353" fromNodePartID="9" fromNodeColumnName="DUE_DATE" toNodePartID="0" toNodeColumnName="DUE_DATE" />
+      <Link partID="20" from="12" to="13" pointsArr="263 93.109375 273 93.109375 522.1045 86.03645 532.1045 86.03645" fromNodePartID="9" fromNodeColumnName="STATUS" toNodePartID="0" toNodeColumnName="STATUS" />
+      <Link partID="21" from="5" to="14" pointsArr="263 105.182281 273 105.182281 522.1045 98.10936 532.1045 98.10936" fromNodePartID="9" fromNodeColumnName="BALANCE" toNodePartID="0" toNodeColumnName="BALANCE" />
+      <Link partID="56" from="2" to="15" pointsArr="487.49353 177.545563 497.49353 177.545563 522.1045 110.182281 532.1045 110.182281" fromNodePartID="52" fromNodeColumnName="real_balance" toNodePartID="0" toNodeColumnName="REAL_BALANCE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

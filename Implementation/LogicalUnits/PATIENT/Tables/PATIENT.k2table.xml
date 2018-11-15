@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>PATIENT</Name>
+  <ID>tbl_PATIENT</ID>
+  <EntityId>tblCol_e935f441ee614b6f9762432a27e2b083</EntityId>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <Columns>
+    <Column name="PATIENT_ID" id="tblCol_504cac91baea4895a8aeabd3411131f7" index="0" datatype="Text" mandatory="true" />
+    <Column name="SSN" id="tblCol_e935f441ee614b6f9762432a27e2b083" index="1" datatype="Text" />
+    <Column name="FIRST_NAME" id="tblCol_99fa317ea81849779ab66e13155cdcbf" index="2" datatype="Text" />
+    <Column name="LAST_NAME" id="tblCol_e50246491c344af784ecba43ca713a74" index="3" datatype="Text" />
+    <Column name="ADDRESS" id="tblCol_7548c41495634a38a4667b0c0e1e6c84" index="4" datatype="Text" />
+    <Column name="CITY" id="tblCol_1748ab2c32984617988842811ccf6f12" index="5" datatype="Text" />
+    <Column name="ZIP" id="tblCol_f40a0f0c993646608a27c5adbe77e95a" index="6" datatype="Text" />
+    <Column name="STATE" id="tblCol_09103096a8734ebda971dc1b7a747be8" index="7" datatype="Text" />
+    <Column name="COUNTRY" id="tblCol_f5d4489600f340c5a509b72678cf3f9e" index="8" datatype="Text" />
+    <Column name="FULL_NAME" id="tblCol_fd272eded91a4d37ad79259b3e1c6263" index="9" datatype="text" />
+    <Column name="STATE_CITY" id="tblCol_6067dccf67bc4f4a8329bf07849d972d" index="10" datatype="text" />
+    <Column name="KRISH_IDENTIFIER_1" id="tblCol_f5dfff5460b14c49b1e33dccf7a0f559" index="11" datatype="text" />
+    <Column name="KRISH_IDENTIFIER_2" id="tblCol_bc9e8d324ac042b5b1c7590bd59dea00" index="12" datatype="text" />
+    <Column name="IS_SUPER_USER" id="tblCol_e46f44edc85a46f98213708534a1635e" index="13" datatype="text" />
+    <Column name="IS_SUPER_USER_ENRICHMENT" id="tblCol_181a8d58947f4329b466058bdd4d3cb8" index="14" datatype="text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_504cac91baea4895a8aeabd3411131f7" />
+  </IndexesList>
+  <EnrichmentList>
+    <Enrichment>
+      <Name>PATIENT_Enrich_Object</Name>
+      <Type>Function</Type>
+      <TableName>PATIENT</TableName>
+    </Enrichment>
+  </EnrichmentList>
+</TableObject>

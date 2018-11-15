@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_public_radiology_results</ID>
+  <PopulationObjectName>query_public_radiology_results</PopulationObjectName>
+  <TableName>radiology_results</TableName>
+  <RootItemID>query_query_public_radiology_results</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <InputArguments>
+    <Arg name="visit_id" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="test_id" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="test_date" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="test_type" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="results" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="scan" id="queryCol_5" dataType="BLOB" index="5" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_radiology_results" name="query_public_radiology_results" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="PACS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="visit_id" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="test_id" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="test_date" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="test_type" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="results" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="scan" dataType="BLOB" index="5" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.radiology_results]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="84" fromNodeOrder="0" fromItemID="query_query_public_radiology_results" fromColID="queryCol_0" toItemID="tbl_radiology_results" toColID="tblCol_e7696b00a3ea4023944a61115bea411b" />
+    <Link partId="17" fromNodeOrder="0" fromItemID="query_query_public_radiology_results" fromColID="queryCol_1" toItemID="tbl_radiology_results" toColID="tblCol_65d86bbb728c4ef98f5c29cff7532f38" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_public_radiology_results" fromColID="queryCol_2" toItemID="tbl_radiology_results" toColID="tblCol_86283cf3b4c842fbaaf6b42639c542b4" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="query_query_public_radiology_results" fromColID="queryCol_3" toItemID="tbl_radiology_results" toColID="tblCol_534b87b153ef4d40b42d36198b18ead9" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_public_radiology_results" fromColID="queryCol_4" toItemID="tbl_radiology_results" toColID="tblCol_5b56b25882a5496e88ac7c41afbf554a" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_public_radiology_results" fromColID="queryCol_5" toItemID="tbl_radiology_results" toColID="tblCol_67243d5a894246a88893f894eb128f18" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="radiology_results.query_public_radiology_results.k2tablePop.xml" lastPartID="98">
+      <TableNode partID="0" name="radiology_results" pos="327.442444 12.7447968" width="309.324158" />
+      <DBQueryNode partID="9" name="PACS_DB" pos="10 8.78125" size="272.442444 132.4375" isRoot="true">
+        <DBQuery>{"Name":"query_public_radiology_results","ID":"query_query_public_radiology_results","ConnName":"PACS_DB","SQL":"SELECT * FROM public.radiology_results","ColumnsList":[{"ID":"queryCol_0","Name":"visit_id","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"test_id","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"test_date","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"test_type","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"results","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"scan","DataType":"BLOB","Index":5,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="17" from="0" to="1" pointsArr="282.442444 56.890625 292.442444 56.890625 294.942444 25 314.942444 25 317.442444 55.85417 327.442444 55.85417" fromNodePartID="9" fromNodeColumnName="test_id" toNodePartID="0" toNodeColumnName="test_id" />
+      <Link partID="18" from="2" to="3" pointsArr="282.442444 68.96354 292.442444 68.96354 294.942444 50 314.942444 50 317.442444 67.9270859 327.442444 67.9270859" fromNodePartID="9" fromNodeColumnName="test_date" toNodePartID="0" toNodeColumnName="test_date" />
+      <Link partID="19" from="4" to="5" pointsArr="282.442444 81.03645 292.442444 81.03645 294.942444 75 314.942444 75 317.442444 80 327.442444 80" fromNodePartID="9" fromNodeColumnName="test_type" toNodePartID="0" toNodeColumnName="test_type" />
+      <Link partID="20" from="6" to="7" pointsArr="282.442444 93.109375 292.442444 93.109375 294.942444 100 314.942444 100 317.442444 92.0729141 327.442444 92.0729141" fromNodePartID="9" fromNodeColumnName="results" toNodePartID="0" toNodeColumnName="results" />
+      <Link partID="21" from="8" to="9" pointsArr="282.442444 105.182281 292.442444 105.182281 294.942444 125 314.942444 125 317.442444 104.145828 327.442444 104.145828" fromNodePartID="9" fromNodeColumnName="scan" toNodePartID="0" toNodeColumnName="scan" />
+      <Link partID="84" from="10" to="11" pointsArr="282.442444 44.81771 292.442444 44.81771 294.942444 0 314.942444 0 317.442444 43.7812538 327.442444 43.7812538" fromNodePartID="9" fromNodeColumnName="visit_id" toNodePartID="0" toNodeColumnName="visit_id" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

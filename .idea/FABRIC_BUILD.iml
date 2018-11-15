@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/SharedObjects/Java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/SharedObjects/Java/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/LogicalUnits/k2_ref/Java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/LogicalUnits/k2_ws/Java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/LogicalUnits/PATIENT/Java/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/LogicalUnits/k2_ref/Java/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/LogicalUnits/k2_ws/Java/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/Implementation/LogicalUnits/PATIENT/Java/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="FabricLibraries" level="project" />
+  </component>
+</module>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_public_medication_reference</ID>
+  <PopulationObjectName>query_public_medication_reference</PopulationObjectName>
+  <TableName>medication_reference</TableName>
+  <RootItemID>query_query_public_medication_reference</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <InputArguments>
+    <Arg name="medication_id" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="medication_name" id="queryCol_1" dataType="Text" index="1" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_medication_reference" name="query_public_medication_reference" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="PIS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="medication_id" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="medication_name" dataType="Text" index="1" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.medication_reference]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="8" fromNodeOrder="0" fromItemID="query_query_public_medication_reference" fromColID="queryCol_0" toItemID="tbl_medication_reference" toColID="tblCol_424eafecb58d4da7abd90140b1968c16" />
+    <Link partId="9" fromNodeOrder="0" fromItemID="query_query_public_medication_reference" fromColID="queryCol_1" toItemID="tbl_medication_reference" toColID="tblCol_4da208db049c4c8b9ee70e1c169b8769" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="medication_reference.query_public_medication_reference.k2tablePop.xml" lastPartID="9">
+      <TableNode partID="0" name="medication_reference" pos="430.259674 5.890629" width="309.324158" />
+      <DBQueryNode partID="5" name="PIS_DB" pos="10 0.9270859" size="300.259644 84.14583" isRoot="true">
+        <DBQuery>{"Name":"query_public_medication_reference","ID":"query_query_public_medication_reference","ConnName":"PIS_DB","SQL":"SELECT * FROM public.medication_reference","ColumnsList":[{"ID":"queryCol_0","Name":"medication_id","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"medication_name","DataType":"Text","Index":1,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="8" from="0" to="1" pointsArr="310.259644 36.9635429 320.259644 36.9635429 360.259644 37 380.259644 37 420.259674 36.9270859 430.259674 36.9270859" fromNodePartID="5" fromNodeColumnName="medication_id" toNodePartID="0" toNodeColumnName="medication_id" />
+      <Link partID="9" from="2" to="3" pointsArr="310.259644 49.03646 320.259644 49.03646 360.259644 49 380.259644 49 420.259674 49.0000038 430.259674 49.0000038" fromNodePartID="5" fromNodeColumnName="medication_name" toNodePartID="0" toNodeColumnName="medication_name" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

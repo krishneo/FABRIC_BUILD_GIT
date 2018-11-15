@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_INSURANCE_INFORMATION</ID>
+  <PopulationObjectName>query_INSURANCE_INFORMATION</PopulationObjectName>
+  <TableName>INSURANCE_INFORMATION</TableName>
+  <RootItemID>query_query_INSURANCE_INFORMATION</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <InputArguments>
+    <Arg name="PATIENT_ID" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="POLICY_ID" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="VALID_FROM" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="VALID_TO" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="STATUS" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="PROVIDE" id="queryCol_5" dataType="Text" index="5" />
+    <Arg name="PLAN" id="queryCol_6" dataType="Text" index="6" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_INSURANCE_INFORMATION" name="query_INSURANCE_INFORMATION" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="HIS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="PATIENT_ID" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="POLICY_ID" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="VALID_FROM" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="VALID_TO" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="STATUS" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="PROVIDE" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="PLAN" dataType="Text" index="6" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM INSURANCE_INFORMATION]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_0" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_deb1a28d87a34618b92c766e1dc26ef4" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_1" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_cb0f8b51f510444ca78d600ea17d0267" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_2" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_d73d833f56de4dd0bbc44e55a7e39c15" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_3" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_74b54b64c22c46ec99f812bd5d2bb066" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_4" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_461f2db875d84fb8929fd0686ebf64a8" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_5" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_ef2184e5613b40b9ab476b536b32a019" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_INSURANCE_INFORMATION" fromColID="queryCol_6" toItemID="tbl_INSURANCE_INFORMATION" toColID="tblCol_a0190ed2404d4951b3257eb6a52f20d2" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="INSURANCE_INFORMATION.query_INSURANCE_INFORMATION.k2tablePop.xml" lastPartID="24">
+      <TableNode partID="0" name="INSURANCE_INFORMATION" pos="441.3876 5.70834351" width="309.324158" />
+      <DBQueryNode partID="10" name="HIS_DB" pos="9.999985 0.744796753" size="311.3876 144.5104" isRoot="true">
+        <DBQuery>{"Name":"query_INSURANCE_INFORMATION","ID":"query_query_INSURANCE_INFORMATION","ConnName":"HIS_DB","SQL":"SELECT * FROM INSURANCE_INFORMATION","ColumnsList":[{"ID":"queryCol_0","Name":"PATIENT_ID","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"POLICY_ID","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"VALID_FROM","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"VALID_TO","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"STATUS","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"PROVIDE","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"PLAN","DataType":"Text","Index":6,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="18" from="0" to="1" pointsArr="321.387573 36.7812538 331.387573 36.7812538 371.387573 37 391.387573 37 431.3876 36.7448 441.3876 36.7448" fromNodePartID="10" fromNodeColumnName="PATIENT_ID" toNodePartID="0" toNodeColumnName="PATIENT_ID" />
+      <Link partID="19" from="2" to="3" pointsArr="321.387573 48.85417 331.387573 48.85417 371.387573 49 391.387573 49 431.3876 48.81772 441.3876 48.81772" fromNodePartID="10" fromNodeColumnName="POLICY_ID" toNodePartID="0" toNodeColumnName="POLICY_ID" />
+      <Link partID="20" from="4" to="5" pointsArr="321.387573 60.9270859 331.387573 60.9270859 371.387573 61 391.387573 61 431.3876 60.8906326 441.3876 60.8906326" fromNodePartID="10" fromNodeColumnName="VALID_FROM" toNodePartID="0" toNodeColumnName="VALID_FROM" />
+      <Link partID="21" from="6" to="7" pointsArr="321.387573 73 331.387573 73 371.387573 73 391.387573 73 431.3876 72.96355 441.3876 72.96355" fromNodePartID="10" fromNodeColumnName="VALID_TO" toNodePartID="0" toNodeColumnName="VALID_TO" />
+      <Link partID="22" from="8" to="9" pointsArr="321.387573 85.0729141 331.387573 85.0729141 371.387573 85 391.387573 85 431.3876 85.03646 441.3876 85.03646" fromNodePartID="10" fromNodeColumnName="STATUS" toNodePartID="0" toNodeColumnName="STATUS" />
+      <Link partID="23" from="10" to="11" pointsArr="321.387573 97.14583 331.387573 97.14583 371.387573 97 391.387573 97 431.3876 97.109375 441.3876 97.109375" fromNodePartID="10" fromNodeColumnName="PROVIDE" toNodePartID="0" toNodeColumnName="PROVIDE" />
+      <Link partID="24" from="12" to="13" pointsArr="321.387573 109.21875 331.387573 109.21875 371.387573 109 391.387573 109 431.3876 109.1823 441.3876 109.1823" fromNodePartID="10" fromNodeColumnName="PLAN" toNodePartID="0" toNodeColumnName="PLAN" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

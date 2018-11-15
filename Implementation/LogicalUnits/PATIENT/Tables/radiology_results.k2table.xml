@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>radiology_results</Name>
+  <ID>tbl_radiology_results</ID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <Columns>
+    <Column name="visit_id" id="tblCol_e7696b00a3ea4023944a61115bea411b" index="0" datatype="Text" />
+    <Column name="test_id" id="tblCol_65d86bbb728c4ef98f5c29cff7532f38" index="1" datatype="Text" />
+    <Column name="test_date" id="tblCol_86283cf3b4c842fbaaf6b42639c542b4" index="2" datatype="Text" />
+    <Column name="test_type" id="tblCol_534b87b153ef4d40b42d36198b18ead9" index="3" datatype="Text" />
+    <Column name="results" id="tblCol_5b56b25882a5496e88ac7c41afbf554a" index="4" datatype="Text" />
+    <Column name="scan" id="tblCol_67243d5a894246a88893f894eb128f18" index="5" datatype="BLOB" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+</TableObject>

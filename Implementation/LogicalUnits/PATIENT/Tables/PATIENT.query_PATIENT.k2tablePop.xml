@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_PATIENT</ID>
+  <PopulationObjectName>query_PATIENT</PopulationObjectName>
+  <TableName>PATIENT</TableName>
+  <RootItemID>query_query_PATIENT</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <InputArguments>
+    <Arg name="SSN" id="queryCol_1" dataType="Text" index="1" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_PATIENT" name="query_PATIENT" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="HIS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="PATIENT_ID" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="SSN" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="FIRST_NAME" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="LAST_NAME" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="ADDRESS" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="CITY" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="ZIP" dataType="Text" index="6" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_7" name="STATE" dataType="Text" index="7" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_8" name="COUNTRY" dataType="Text" index="8" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM PATIENT]]></SQL>
+    </Item>
+    <Item id="f_61" name="k2_concat5" nodeOrder="1" module="Function" mapObjectModule="Function" fileName="k2_concat5.k2function.xml">
+      <InputsList>
+        <Input id="fi_61.0" name="i_str1" />
+        <Input id="fi_61.1" name="i_str2" />
+        <Input id="fi_61.2" name="i_str3" />
+        <Input id="fi_61.3" name="i_str4" />
+        <Input id="fi_61.4" name="i_str5" />
+        <Input id="fi_61.5" name="i_delimiter" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_61.0" name="o_str1" />
+      </OutputsList>
+    </Item>
+    <Item id="f_101" name="k2_concat5" nodeOrder="1" module="Function" mapObjectModule="Function" fileName="k2_concat5.k2function.xml">
+      <InputsList>
+        <Input id="fi_101.0" name="i_str1" />
+        <Input id="fi_101.1" name="i_str2" />
+        <Input id="fi_101.2" name="i_str3" />
+        <Input id="fi_101.3" name="i_str4" />
+        <Input id="fi_101.4" name="i_str5" />
+        <Input id="fi_101.5" name="i_delimiter" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_101.0" name="o_str1" />
+      </OutputsList>
+    </Item>
+    <Item id="f_149" name="krish_concat" nodeOrder="1" module="Function" mapObjectModule="Function" fileName="krish_concat.k2function.xml">
+      <InputsList>
+        <Input id="fi_149.0" name="input_string_1" />
+        <Input id="fi_149.1" name="input_string_2" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_149.0" name="output_string_1" />
+        <Output id="fo_149.1" name="output_string_2" />
+      </OutputsList>
+    </Item>
+    <Item id="f_166" name="SUPER_USER_TRANSLATION" nodeOrder="1" module="Translation" mapObjectModule="Translation" fileName="SUPER_USER_TRANSLATION.k2trans.xml">
+      <InputsList>
+        <Input id="fi_166.0" name="SSN" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_166.0" name="IS_SUPER_USER" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_0" toItemID="tbl_PATIENT" toColID="tblCol_504cac91baea4895a8aeabd3411131f7" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_1" toItemID="tbl_PATIENT" toColID="tblCol_e935f441ee614b6f9762432a27e2b083" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_2" toItemID="tbl_PATIENT" toColID="tblCol_99fa317ea81849779ab66e13155cdcbf" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_3" toItemID="tbl_PATIENT" toColID="tblCol_e50246491c344af784ecba43ca713a74" />
+    <Link partId="26" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_4" toItemID="tbl_PATIENT" toColID="tblCol_7548c41495634a38a4667b0c0e1e6c84" />
+    <Link partId="27" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_5" toItemID="tbl_PATIENT" toColID="tblCol_1748ab2c32984617988842811ccf6f12" />
+    <Link partId="28" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_6" toItemID="tbl_PATIENT" toColID="tblCol_f40a0f0c993646608a27c5adbe77e95a" />
+    <Link partId="29" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_7" toItemID="tbl_PATIENT" toColID="tblCol_09103096a8734ebda971dc1b7a747be8" />
+    <Link partId="30" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_8" toItemID="tbl_PATIENT" toColID="tblCol_f5d4489600f340c5a509b72678cf3f9e" />
+    <Link partId="69" fromNodeOrder="1" fromItemID="f_61" fromColID="fo_61.0" toItemID="tbl_PATIENT" toColID="tblCol_fd272eded91a4d37ad79259b3e1c6263" />
+    <Link partId="70" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_2" toItemID="f_61" toColID="fi_61.0" />
+    <Link partId="71" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_3" toItemID="f_61" toColID="fi_61.1" />
+    <Link partId="109" fromNodeOrder="1" fromItemID="f_101" fromColID="fo_101.0" toItemID="tbl_PATIENT" toColID="tblCol_6067dccf67bc4f4a8329bf07849d972d" />
+    <Link partId="110" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_7" toItemID="f_101" toColID="fi_101.0" />
+    <Link partId="111" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_5" toItemID="f_101" toColID="fi_101.1" />
+    <Link partId="159" fromNodeOrder="1" fromItemID="f_149" fromColID="fo_149.0" toItemID="tbl_PATIENT" toColID="tblCol_f5dfff5460b14c49b1e33dccf7a0f559" />
+    <Link partId="153" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_8" toItemID="f_149" toColID="fi_149.0" />
+    <Link partId="154" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_7" toItemID="f_149" toColID="fi_149.1" />
+    <Link partId="160" fromNodeOrder="1" fromItemID="f_149" fromColID="fo_149.1" toItemID="tbl_PATIENT" toColID="tblCol_bc9e8d324ac042b5b1c7590bd59dea00" />
+    <Link partId="170" fromNodeOrder="1" fromItemID="f_166" fromColID="fo_166.0" toItemID="tbl_PATIENT" toColID="tblCol_e46f44edc85a46f98213708534a1635e" />
+    <Link partId="169" fromNodeOrder="0" fromItemID="query_query_PATIENT" fromColID="queryCol_1" toItemID="f_166" toColID="fi_166.0" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="PATIENT.query_PATIENT.k2tablePop.xml" lastPartID="262">
+      <TableNode partID="0" name="PATIENT" pos="827.582764 239.45314" width="312.035767" />
+      <DBQueryNode partID="12" name="HIS_DB" pos="10.000061 215.671875" size="253 168.65625" isRoot="true">
+        <DBQuery>{"Name":"query_PATIENT","ID":"query_query_PATIENT","ConnName":"HIS_DB","SQL":"SELECT * FROM PATIENT","ColumnsList":[{"ID":"queryCol_0","Name":"PATIENT_ID","DataType":"Text","Index":0,"IsInputArgument":false},{"ID":"queryCol_1","Name":"SSN","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"FIRST_NAME","DataType":"Text","Index":2,"IsInputArgument":false},{"ID":"queryCol_3","Name":"LAST_NAME","DataType":"Text","Index":3,"IsInputArgument":false},{"ID":"queryCol_4","Name":"ADDRESS","DataType":"Text","Index":4,"IsInputArgument":false},{"ID":"queryCol_5","Name":"CITY","DataType":"Text","Index":5,"IsInputArgument":false},{"ID":"queryCol_6","Name":"ZIP","DataType":"Text","Index":6,"IsInputArgument":false},{"ID":"queryCol_7","Name":"STATE","DataType":"Text","Index":7,"IsInputArgument":false},{"ID":"queryCol_8","Name":"COUNTRY","DataType":"Text","Index":8,"IsInputArgument":false}]}</DBQuery>
+      </DBQueryNode>
+      <FunctionMapNode id="0" L0="4" L1="5" L2="6" L3="7" L4="8" L5="9" R0="10" partID="61" topLabel="k2_concat5 (61)" pos="337.250854 176.235672" size="138.580292 97.52864" isRoot="false">
+        <KFunction>{"Name":"k2_concat5","ID":"f_61","Category":"String","FunctionLevel":1,"FunctionType":0,"FunctionType2":0,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"Concatenate up-to 5 strings with defined delimiter","Language":1,"IsRootFunction":false,"inputParams":[{"Name":"i_str1","ID":"fi_61.0","Index":0,"DataType":"String"},{"Name":"i_str2","ID":"fi_61.1","Index":1,"DataType":"String"},{"Name":"i_str3","ID":"fi_61.2","Index":2,"DataType":"String"},{"Name":"i_str4","ID":"fi_61.3","Index":3,"DataType":"String"},{"Name":"i_str5","ID":"fi_61.4","Index":4,"DataType":"String"},{"Name":"i_delimiter","ID":"fi_61.5","Index":5,"DataType":"String"}],"outputParams":[{"Name":"o_str1","ID":"fo_61.0","Index":0,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <FunctionMapNode id="1" L0="11" L1="12" L2="13" L3="14" L4="15" L5="16" R0="17" partID="101" topLabel="k2_concat5 (101)" pos="337.252655 426.235657" size="138.576721 97.5286255" isRoot="false">
+        <KFunction>{"Name":"k2_concat5","ID":"f_101","Category":"String","FunctionLevel":1,"FunctionType":0,"FunctionType2":0,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"Concatenate up-to 5 strings with defined delimiter","Language":1,"IsRootFunction":false,"inputParams":[{"Name":"i_str1","ID":"fi_101.0","Index":0,"DataType":"String"},{"Name":"i_str2","ID":"fi_101.1","Index":1,"DataType":"String"},{"Name":"i_str3","ID":"fi_101.2","Index":2,"DataType":"String"},{"Name":"i_str4","ID":"fi_101.3","Index":3,"DataType":"String"},{"Name":"i_str5","ID":"fi_101.4","Index":4,"DataType":"String"},{"Name":"i_delimiter","ID":"fi_101.5","Index":5,"DataType":"String"}],"outputParams":[{"Name":"o_str1","ID":"fo_101.0","Index":0,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <FunctionMapNode id="2" L0="18" L1="19" R0="20" R1="21" partID="149" topLabel="krish_concat (149)" pos="308.01355 575.381531" size="197.054932 49.23694" isRoot="false">
+        <KFunction>{"Name":"krish_concat","ID":"f_149","Category":"krish","Version":"4.1.0.13","FunctionLevel":0,"FunctionType":0,"FunctionType2":0,"RegisterAsLuDbFunction":false,"SaveToDLUR":false,"ApiFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"All My Functions","Language":1,"IsRootFunction":false,"inputParams":[{"Name":"input_string_1","ID":"fi_149.0","Index":0,"DataType":"String"},{"Name":"input_string_2","ID":"fi_149.1","Index":1,"DataType":"String"}],"outputParams":[{"Name":"output_string_1","ID":"fo_149.0","Index":0,"DataType":"String"},{"Name":"output_string_2","ID":"fo_149.1","Index":1,"DataType":"String"}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <TranslationMapNode id="3" L0="22" R0="23" partID="166" topLabel="SUPER_USER_TRANSLATION (166)" pos="550.082031 52.4544258" size="232.916626 45.0911522">
+        <TranslationItem>{"ID":"f_166","Name":"SUPER_USER_TRANSLATION","InputNotFoundAction":0,"ListSchemaItems":[{"Title":"SSN","ColumnName":"SSN","Direction":0,"Type":"Text","Length":100,"Format":"","ID":"fi_166.0","Index":0,"AllowNULL":true,"GridColumnProperties":{"Width":100}},{"Title":"IS_SUPER_USER","ColumnName":"IS_SUPER_USER","Direction":1,"Type":"Text","Length":10,"Format":"","ID":"fo_166.0","Index":0,"DefaultValueIsExpression":false,"AllowNULL":true,"GridColumnProperties":{"Width":113}}],"IsImportFromSQL":false,"IsDynamicData":false,"ImportFileMapList":[],"DataRowsHeight":20}</TranslationItem>
+      </TranslationMapNode>
+      <Link partID="22" from="24" to="25" pointsArr="263.000061 251.708328 273.000061 251.708328 818.0429 270.4896 828.0429 270.4896" fromNodePartID="12" fromNodeColumnName="PATIENT_ID" toNodePartID="0" toNodeColumnName="PATIENT_ID" />
+      <Link partID="70" from="26" to="4" pointsArr="263.000061 275.854156 273.000061 275.854156 275.500061 225 295.500061 225 327.250854 197.363266 337.250854 197.363266" fromNodePartID="12" fromNodeColumnName="FIRST_NAME" toNodePartID="61" toNodeColumnName="i_str1" />
+      <Link partID="71" from="27" to="5" pointsArr="263.000061 287.927063 273.000061 287.927063 275.500061 275 295.500061 275 327.250854 209.436188 337.250854 209.436188" fromNodePartID="12" fromNodeColumnName="LAST_NAME" toNodePartID="61" toNodeColumnName="i_str2" />
+      <Link partID="110" from="28" to="11" pointsArr="263.000061 336.21875 273.000061 336.21875 275.500061 425 295.500061 425 327.252655 447.363281 337.252655 447.363281" fromNodePartID="12" fromNodeColumnName="STATE" toNodePartID="101" toNodeColumnName="i_str1" />
+      <Link partID="111" from="29" to="12" pointsArr="263.000061 312.0729 273.000061 312.0729 275.500061 350 295.500061 350 327.252655 459.4362 337.252655 459.4362" fromNodePartID="12" fromNodeColumnName="CITY" toNodePartID="101" toNodeColumnName="i_str2" />
+      <Link partID="153" from="30" to="18" pointsArr="263.000061 348.2917 273.000061 348.2917 275.500061 500 295.500061 500 298.01355 596.5091 308.01355 596.5091" fromNodePartID="12" fromNodeColumnName="COUNTRY" toNodePartID="149" toNodeColumnName="input_string_1" />
+      <Link partID="154" from="28" to="19" pointsArr="263.000061 336.21875 273.000061 336.21875 275.500061 450 295.500061 450 298.01355 608.582031 308.01355 608.582031" fromNodePartID="12" fromNodeColumnName="STATE" toNodePartID="149" toNodeColumnName="input_string_2" />
+      <Link partID="169" from="31" to="22" pointsArr="263.000061 263.78125 273.000061 263.78125 275.500061 100 295.500061 100 298.000061 100 515.082 100 590.6602 77.54558 600.6602 77.54558" fromNodePartID="12" fromNodeColumnName="SSN" toNodePartID="166" toNodeColumnName="SSN" />
+      <Link partID="23" from="31" to="32" pointsArr="263.000061 263.78125 273.000061 263.78125 818.0429 282.5625 828.0429 282.5625" fromNodePartID="12" fromNodeColumnName="SSN" toNodePartID="0" toNodeColumnName="SSN" />
+      <Link partID="24" from="26" to="33" pointsArr="263.000061 275.854156 273.000061 275.854156 818.0429 294.6354 828.0429 294.6354" fromNodePartID="12" fromNodeColumnName="FIRST_NAME" toNodePartID="0" toNodeColumnName="FIRST_NAME" />
+      <Link partID="25" from="27" to="34" pointsArr="263.000061 287.927063 273.000061 287.927063 818.0429 306.7083 828.0429 306.7083" fromNodePartID="12" fromNodeColumnName="LAST_NAME" toNodePartID="0" toNodeColumnName="LAST_NAME" />
+      <Link partID="26" from="35" to="36" pointsArr="263.000061 300 273.000061 300 818.0429 318.78125 828.0429 318.78125" fromNodePartID="12" fromNodeColumnName="ADDRESS" toNodePartID="0" toNodeColumnName="ADDRESS" />
+      <Link partID="27" from="29" to="37" pointsArr="263.000061 312.0729 273.000061 312.0729 818.0429 330.854156 828.0429 330.854156" fromNodePartID="12" fromNodeColumnName="CITY" toNodePartID="0" toNodeColumnName="CITY" />
+      <Link partID="28" from="38" to="39" pointsArr="263.000061 324.1458 273.000061 324.1458 818.0429 342.927063 828.0429 342.927063" fromNodePartID="12" fromNodeColumnName="ZIP" toNodePartID="0" toNodeColumnName="ZIP" />
+      <Link partID="29" from="28" to="40" pointsArr="263.000061 336.21875 273.000061 336.21875 818.0429 355 828.0429 355" fromNodePartID="12" fromNodeColumnName="STATE" toNodePartID="0" toNodeColumnName="STATE" />
+      <Link partID="30" from="30" to="41" pointsArr="263.000061 348.2917 273.000061 348.2917 818.0429 367.072937 828.0429 367.072937" fromNodePartID="12" fromNodeColumnName="COUNTRY" toNodePartID="0" toNodeColumnName="COUNTRY" />
+      <Link partID="69" from="10" to="42" pointsArr="475.831146 227.545547 485.831146 227.545547 818.0429 379.145844 828.0429 379.145844" fromNodePartID="61" fromNodeColumnName="o_str1" toNodePartID="0" toNodeColumnName="FULL_NAME" />
+      <Link partID="109" from="17" to="43" pointsArr="475.829376 477.545563 485.829376 477.545563 818.0429 391.21875 828.0429 391.21875" fromNodePartID="101" fromNodeColumnName="o_str1" toNodePartID="0" toNodeColumnName="STATE_CITY" />
+      <Link partID="159" from="20" to="44" pointsArr="505.068481 596.5091 515.0685 596.5091 818.0429 403.2917 828.0429 403.2917" fromNodePartID="149" fromNodeColumnName="output_string_1" toNodePartID="0" toNodeColumnName="KRISH_IDENTIFIER_1" />
+      <Link partID="160" from="21" to="45" pointsArr="505.068481 608.582031 515.0685 608.582031 818.0429 415.364563 828.0429 415.364563" fromNodePartID="149" fromNodeColumnName="output_string_2" toNodePartID="0" toNodeColumnName="KRISH_IDENTIFIER_2" />
+      <Link partID="170" from="23" to="46" pointsArr="732.420532 77.54558 742.420532 77.54558 818.0429 427.4375 828.0429 427.4375" fromNodePartID="166" fromNodeColumnName="IS_SUPER_USER" toNodePartID="0" toNodeColumnName="IS_SUPER_USER" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>query_public_pharmacy_information</ID>
+  <PopulationObjectName>query_public_pharmacy_information</PopulationObjectName>
+  <TableName>pharmacy_information</TableName>
+  <RootItemID>query_query_public_pharmacy_information</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <InputArguments>
+    <Arg name="pharmacy_id" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="ssn" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="pharmacy_name" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="address" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="city" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="zip" id="queryCol_5" dataType="Text" index="5" />
+    <Arg name="state" id="queryCol_6" dataType="Text" index="6" />
+    <Arg name="country" id="queryCol_7" dataType="Text" index="7" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_pharmacy_information" name="query_public_pharmacy_information" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="PIS_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="pharmacy_id" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="ssn" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="pharmacy_name" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="address" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="city" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="zip" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="state" dataType="Text" index="6" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_7" name="country" dataType="Text" index="7" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.pharmacy_information]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_0" toItemID="tbl_pharmacy_information" toColID="tblCol_f89ff5a8af224f5a9fb28890ae4a0f2a" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_1" toItemID="tbl_pharmacy_information" toColID="tblCol_7a2e3e843b99492e9e80e820020ee97d" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_2" toItemID="tbl_pharmacy_information" toColID="tblCol_48b4899ebdec497dbda458df346cc494" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_3" toItemID="tbl_pharmacy_information" toColID="tblCol_6e4c7ea64cca4d1992aabe5765d9706a" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_4" toItemID="tbl_pharmacy_information" toColID="tblCol_c180e126c7c249dea6f1902bedb34bd4" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_5" toItemID="tbl_pharmacy_information" toColID="tblCol_42be6947eb5b4005b58f554d6d71d585" />
+    <Link partId="26" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_6" toItemID="tbl_pharmacy_information" toColID="tblCol_46e90426d0e844df90f432cd198950ff" />
+    <Link partId="27" fromNodeOrder="0" fromItemID="query_query_public_pharmacy_information" fromColID="queryCol_7" toItemID="tbl_pharmacy_information" toColID="tblCol_668b68530a8c411391dc6f3ad67da34d" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="pharmacy_information.query_public_pharmacy_information.k2tablePop.xml" lastPartID="27">
+      <TableNode partID="0" name="pharmacy_information" pos="440.16275 5.67189026" width="309.324158" />
+      <DBQueryNode partID="11" name="PIS_DB" pos="10 0.7083435" size="310.16272 156.583313" isRoot="true">
+        <DBQuery>{"Name":"query_public_pharmacy_information","ID":"query_query_public_pharmacy_information","ConnName":"PIS_DB","SQL":"SELECT * FROM public.pharmacy_information","ColumnsList":[{"ID":"queryCol_0","Name":"pharmacy_id","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"ssn","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"pharmacy_name","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"address","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"city","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"zip","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"state","DataType":"Text","Index":6,"IsInputArgument":true},{"ID":"queryCol_7","Name":"country","DataType":"Text","Index":7,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="20" from="0" to="1" pointsArr="320.16272 36.7447968 330.16272 36.7447968 370.16272 37 390.16272 37 430.16275 36.7083435 440.16275 36.7083435" fromNodePartID="11" fromNodeColumnName="pharmacy_id" toNodePartID="0" toNodeColumnName="pharmacy_id" />
+      <Link partID="21" from="2" to="3" pointsArr="320.16272 48.81771 330.16272 48.81771 370.16272 49 390.16272 49 430.16275 48.7812576 440.16275 48.7812576" fromNodePartID="11" fromNodeColumnName="ssn" toNodePartID="0" toNodeColumnName="ssn" />
+      <Link partID="22" from="4" to="5" pointsArr="320.16272 60.890625 330.16272 60.890625 370.16272 61 390.16272 61 430.16275 60.85417 440.16275 60.85417" fromNodePartID="11" fromNodeColumnName="pharmacy_name" toNodePartID="0" toNodeColumnName="pharmacy_name" />
+      <Link partID="23" from="6" to="7" pointsArr="320.16272 72.96355 330.16272 72.96355 370.16272 73 390.16272 73 430.16275 72.92709 440.16275 72.92709" fromNodePartID="11" fromNodeColumnName="address" toNodePartID="0" toNodeColumnName="address" />
+      <Link partID="24" from="8" to="9" pointsArr="320.16272 85.03645 330.16272 85.03645 370.16272 85 390.16272 85 430.16275 85 440.16275 85" fromNodePartID="11" fromNodeColumnName="city" toNodePartID="0" toNodeColumnName="city" />
+      <Link partID="25" from="10" to="11" pointsArr="320.16272 97.109375 330.16272 97.109375 370.16272 97 390.16272 97 430.16275 97.07292 440.16275 97.07292" fromNodePartID="11" fromNodeColumnName="zip" toNodePartID="0" toNodeColumnName="zip" />
+      <Link partID="26" from="12" to="13" pointsArr="320.16272 109.1823 330.16272 109.1823 370.16272 109 390.16272 109 430.16275 109.145844 440.16275 109.145844" fromNodePartID="11" fromNodeColumnName="state" toNodePartID="0" toNodeColumnName="state" />
+      <Link partID="27" from="14" to="15" pointsArr="320.16272 121.255219 330.16272 121.255219 370.16272 121 390.16272 121 430.16275 121.218765 440.16275 121.218765" fromNodePartID="11" fromNodeColumnName="country" toNodePartID="0" toNodeColumnName="country" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

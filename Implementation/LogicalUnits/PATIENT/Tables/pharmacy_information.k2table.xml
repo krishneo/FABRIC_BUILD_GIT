@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>pharmacy_information</Name>
+  <ID>tbl_pharmacy_information</ID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <Columns>
+    <Column name="pharmacy_id" id="tblCol_f89ff5a8af224f5a9fb28890ae4a0f2a" index="0" datatype="Text" />
+    <Column name="ssn" id="tblCol_7a2e3e843b99492e9e80e820020ee97d" index="1" datatype="Text" />
+    <Column name="pharmacy_name" id="tblCol_48b4899ebdec497dbda458df346cc494" index="2" datatype="Text" />
+    <Column name="address" id="tblCol_6e4c7ea64cca4d1992aabe5765d9706a" index="3" datatype="Text" />
+    <Column name="city" id="tblCol_c180e126c7c249dea6f1902bedb34bd4" index="4" datatype="Text" />
+    <Column name="zip" id="tblCol_42be6947eb5b4005b58f554d6d71d585" index="5" datatype="Text" />
+    <Column name="state" id="tblCol_46e90426d0e844df90f432cd198950ff" index="6" datatype="Text" />
+    <Column name="country" id="tblCol_668b68530a8c411391dc6f3ad67da34d" index="7" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+</TableObject>

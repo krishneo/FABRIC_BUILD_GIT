@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>INSURANCE_INFORMATION</Name>
+  <ID>tbl_INSURANCE_INFORMATION</ID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <Columns>
+    <Column name="PATIENT_ID" id="tblCol_deb1a28d87a34618b92c766e1dc26ef4" index="0" datatype="Text" />
+    <Column name="POLICY_ID" id="tblCol_cb0f8b51f510444ca78d600ea17d0267" index="1" datatype="Text" mandatory="true" />
+    <Column name="VALID_FROM" id="tblCol_d73d833f56de4dd0bbc44e55a7e39c15" index="2" datatype="Text" />
+    <Column name="VALID_TO" id="tblCol_74b54b64c22c46ec99f812bd5d2bb066" index="3" datatype="Text" />
+    <Column name="STATUS" id="tblCol_461f2db875d84fb8929fd0686ebf64a8" index="4" datatype="Text" />
+    <Column name="PROVIDE" id="tblCol_ef2184e5613b40b9ab476b536b32a019" index="5" datatype="Text" />
+    <Column name="PLAN" id="tblCol_a0190ed2404d4951b3257eb6a52f20d2" index="6" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_cb0f8b51f510444ca78d600ea17d0267" />
+  </IndexesList>
+  <EnrichmentList />
+</TableObject>
